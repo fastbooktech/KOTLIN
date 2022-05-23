@@ -1,0 +1,35 @@
+fun main() {
+    var a = Latte("hot", "medium", 5)
+    a.printMenu()
+    
+    var b = HotLatte("large",1)
+    b.printMenu()
+    
+    val c = IceLatte("small",30)
+    c.printMenu()
+}
+
+
+open class Latte(var latteTemperature:String, var size: String, var num : Int){
+    init{
+        println("please wait. We are making beverages \n")
+    }
+    constructor(latteTemperature : String, size : String) : this(latteTemperature, size,2){
+        println("\n Using second CONSTRUCTOR \n")
+    }
+    //this X
+    fun printMenu(){
+        println("you ordered $num ${latteTemperature} latte ${size} \n\n")
+    }
+}
+
+class HotLatte(size: String, num: Int) : Latte("HOT", size, num){
+    init{
+            println("compiler entered hotlatte class\n")
+    }
+}
+class IceLatte(size: String, num: Int) : Latte("ICE", size, num){
+    init{
+            println("compiler entered icelatte class\n")
+    }
+}
