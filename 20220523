@@ -1,0 +1,21 @@
+fun main() {
+    val user_input = Person("slowbook", 12)
+    user_input.printing()
+    
+    val designated_age = Person("fastbook")
+    designated_age.printing()
+}
+
+class Person(var name:String, var age : Int){
+    init{
+        println("class making has been started")
+    }
+    
+    constructor(name:String) : this(name, 34){
+        println("secondary constructor designated")
+    }
+    
+    fun printing(){
+        println("${this.name} is her name, ${this.age} is her age\n")
+    }
+}
