@@ -1,0 +1,39 @@
+
+fun main() {
+  // array
+     var breads = arrayOf(
+     	Menu(1, "scon", 2.5), Menu(2, "cake", 7.5)
+        
+     )
+     for(i in breads){
+         print(i)
+     }
+     for(i in breads.indices){
+         print("${breads[i].orderNumber} with ${breads[i].orderedMenu} with ${breads[i].price}\n")
+     }
+ //list 
+
+    val espressos= arrayOf("americano", "Cafelatte", "capuccino")
+    for (i in espressos){
+        println(i)
+    }
+    val coffees=espressos.toMutableList()
+    println("\nmuttabled")
+    for (i in coffees){
+        println(i)
+    }
+    println("\n")
+    val brews = arrayOf("dolche", "coldbrew", "oat")
+    println("brews")
+    for (i in brews){
+        println(i)
+    }
+
+    coffees.addAll(brews)
+    println("muttabled coffees+brews")
+    for (i in coffees){
+        println(i)
+    }
+}
+    
+data class Menu (var orderNumber : Int, val orderedMenu: String, val price: Double)
