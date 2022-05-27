@@ -1,0 +1,6 @@
+fun main() {
+   val sum : (Int, Int) -> Int = {a:Int,b:Int -> a+b}
+   println(sum(20,30))
+   val average : (Int) -> Double = {av : Int -> av/2.0}
+   println(average(sum(20,30)))
+}
