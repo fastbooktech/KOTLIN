@@ -1,0 +1,35 @@
+fun main() {
+    //using nested class
+    //println(Korea().City().country) // private value, can not be used 
+    var specificCity = Korea().City()
+    specificCity.printTargetPlace()
+    
+    //using inner class
+    println(Seoul().Hongdae().tourPlace)
+    var specificAddress = Seoul().Hongdae()
+    specificAddress.printTourPlace()
+}
+//practicing the nested class
+class Korea{
+    //can not be used in the nested class 'City', main function
+    private var country : String = "Your tourcountry is Korea"
+    inner class City{
+        var targetCity = "Seoul"
+        fun printTargetPlace(){
+            println("You chose to go ${targetCity}")
+        }
+        
+    }
+    
+}
+   //practicing the inner class
+class Seoul {
+       private var topic : String = "photo spot"
+       inner class Hongdae{
+           var tourPlace:String ="Your tourplace is hongdae"
+           private var address = 101
+           fun printTourPlace(){
+               println("I recommend you to go ${address} street for ${topic}")
+           }
+       }
+   }
