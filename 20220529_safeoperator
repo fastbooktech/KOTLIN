@@ -1,0 +1,22 @@
+fun main() {
+
+    // works well
+    
+    val charactername:Any = "Slowbook"
+    val character: String?= charactername as? String
+    println("here is your name : ${character}")
+    
+    val age: Int? = charactername as? Int
+    println("your age is : ${age}")
+    
+    //makes cast error
+    
+    val charactername2:Any = "Fastbook"
+    val character2: String?= charactername2 as? String
+    println("here is your name : ${character}")
+    
+    val age2: Int? = charactername2 as Int
+    println("your age is : ${age}")
+    
+    
+}
