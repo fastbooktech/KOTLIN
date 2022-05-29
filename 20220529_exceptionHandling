@@ -1,0 +1,20 @@
+fun main() {
+    var count =0
+    try{
+        val nameIntro= "Slowbook is my name"
+        count++
+        println(nameIntro)
+    }catch(e:NullPointerException){
+        println(e)
+        count--
+    }finally{
+        count++
+        println("always printed, unrelated to the error occurence")
+    }
+    if(count==2){
+        println("success")
+    }
+    else {
+        throw ArithmeticException("under count")
+    }
+    }
